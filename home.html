@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Hub</title>
+    <link rel="stylesheet" href="home.css">
+    <script type="module" src="saveStud.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>        
+                <h1>Student Hub</h1>
+                 
+            <div class="nav">
+                <a href="home.html">Home</a>
+                <a href="students.html">Registered Students</a>
+                <a href="about.html">About Us</a>
+                <button class="logout" id="logoutBtn">Log Out</button>
+            </div>
+        </header>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-value" id="total-students">0</div>
+                <div class="stat-label">Total Students</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="male-students">0</div>
+                <div class="stat-label">Male Students</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="female-students">0</div>
+                <div class="stat-label">Female Students</div>
+            </div>
+
+        </div>
+
+<section class="display">
+            <div class="main-content">
+
+            <div class="student-list">
+                <h2 style="margin-bottom: 20px;">Registered Students</h2>
+
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search students...">
+                    <button class="btn btn-primary" id="searchBtn">Search</button>
+                </div>
+
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">All Students</button>
+                    <button class="filter-btn" data-filter="COLTECH">COLTECH</button>
+                    <button class="filter-btn" data-filter="NAHPI">NAHPI</button>
+                    <button class="filter-btn" data-filter="FHS">FHS</button>
+                </div>
+
+                <div id="studentsContainer">
+                    <div class="empty-state">
+                        
+                        <h3>No students registered yet</h3>
+                        <p>Add your first student using the registration form</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery-section">
+            <h2>Student Photo</h2>
+            <div id="studentGallery" class="gallery-container">
+                <!-- GALLERY ITEMS WILL BE ADDED HERE-->
+            </div>
+        </div>
+  
+
+
+  </section>
+  </div>
+        <!-- Student Details here-->
+         <div class="modal" id="studentModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Student Details</h2>
+                    <button class="close-btn" id="closeModal">&times;</button>
+                </div>
+                <div id="modalBody">
+                    <!--INFORMATION HERE-->
+                </div>
+            </div>
+         </div>
+
+
+         
+<script type="module" src="index.js"></script>
+
+    
+</body>
+</html>
