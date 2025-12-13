@@ -420,7 +420,7 @@
             width: 20%;
         }
 
-        @media (max-width: 665px){
+        @media (max-width: 725px){
             .display{
                 flex-direction: column;
             }
@@ -430,20 +430,23 @@
             .gallery-container{
                 flex-direction: row;
                 width: auto;
-                justify-content: space-between;
+                justify-content: start;
+                gap: 20px;
                 flex-wrap: wrap;
             }
             h1{
-                font-size: 15px;
+                font-size: 20px;
             }
             .nav a{
-                font-size: 11px;
+                font-size: 15px;
             }
                 .logout {
             background: #e63946;
             color: white;
             border: none;
             padding: 4px 10px;
+            width: fit-content;
+            height: fit-content;
             border-radius: 8px;
             cursor: pointer;
             font-weight: 600;
@@ -454,7 +457,9 @@
         }
         .btn{
             font-size: smaller;
-            padding: 3px 5px;
+            padding: 10px 12px;
+            width: fit-content;
+            height: fit-content;
         }
         .student-avatar{
             height: 65px;
@@ -465,3 +470,6 @@
         }
     
         }
+
+
+        

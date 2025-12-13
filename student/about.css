@@ -14,7 +14,7 @@
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
+
         body {
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             color: var(--dark);
@@ -230,11 +230,47 @@
             .about-hero h2 {
                 font-size: 2rem;
             }
+            h1{
+                font-size: 18px;
+            }
+            .team-member{
+                font-size: 14px;
+                
+            }
+            .team-member h4, .team-section h2{
+                font-size: 18px;
+            }
+              .about-hero p{
+                font-size: 16px;
+            }
         }
         .team-member img{
-            width: 250px;
-            height: 250px;
-            border-radius: 10px;
+            width: 200px;
+            height: 200px;
+            border-radius: 90px;
+           
+        }
+        @media (max-width:500px) {
+          .team-member  img{
+                width: 120px;
+                height: 120px;
+            }
+            .team-member{
+                width: 230px;
+            
+            }
+            .team-grid{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .about-hero h2{
+                font-size: 16px;
+            }
+            .about-hero p{
+                font-size: 14px;
+            }
         }
 
           .logout {
