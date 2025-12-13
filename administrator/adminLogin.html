@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Student Hub</title>
-    <link rel="stylesheet" href="index.css">
+    <title>Login - administrators Hub</title>
+    <link rel="stylesheet" href="\administrator\adminLogin.css">
 
 </head>
 <body>
             
     </section>
     <section class="login-container" id="loginPage">
-        <div>
-        <h1 class="login-title">Student Hub</h1>
         
-        <form class="studentForm" id="loginForm">
+        <h1 class="login-title">Administrator</h1>
+        
+        <form class="adminForm" id="loginForm">
             <div class="form-group">
-                <label for="username">Username</label>
+                <label for="username">AdminsName</label>
                 <input type="text" id="username" placeholder="Enter admin username" required>
             </div>
             
@@ -27,23 +27,20 @@
             
             <button type="submit" class="btn">Login</button>
             
-            
-            <div id="error" class="error">
-                Invalid credentials
-            </div>
         </form>
 <button id="signUp" class="btn">SignUp</button>
-
+<a style="text-decoration: none; color: rgb(47, 96, 233); position: relative; top: 18px;" class="clearForm" href="\student\index.html">Login or  SignUp as Student</a>
     </div>
     </section> 
 
     <script type="module">
      
 console.log("hel");
-const student = JSON.parse(localStorage.getItem('students'));
-console.log(student);
-const users = Object(student);
-;
+const administrators = JSON.parse(localStorage.getItem('administrators'));
+console.log(administrators);
+const users = Object.create(administrators);
+console.log(users)
+
 
 
 
@@ -57,23 +54,28 @@ const users = Object(student);
             e.preventDefault();
             
             const username = document.getElementById('username').value;
+         
+ let name = username;
+localStorage.setItem('adminName', name)
             const password = document.getElementById('password').value;
             const error = document.getElementById('error');
 
             const verifyUser = users.find(user => user.fullName === username && user.matricule === password)
 
             if (verifyUser) {
-                alert(`Welcome backe ${username}`)
-                window.location.href = 'home.html'
-                console.log('you are a student')
+                alert(`Welcome back Admin: ${username}`)
+                window.location.href = 'adminDashboard.html'
+                console.log('you are a administrators')
                 
-            } else {
-                alert('wrong credentials');
+            } else if(Array(users).length === 0) {
+                alert('wrong cridentials');
+            }else{
+                alert('wrong cridentials');
             }
             
         });
 
-        //SignUp Student
+        //SignUp administrators
 const signUp = ()=>{
     const signUpBtn = document.getElementById('signUp')
         
@@ -81,7 +83,7 @@ const signUp = ()=>{
             event.preventDefault()
             document.getElementById('loginPage').style.display = 'none'
             // document.getElementById('regForm').style.display = 'block'
-            window.location.href = 'register.html'
+            window.location.href = 'registerAdmin.html'
       })        
 }
 
@@ -90,7 +92,11 @@ const signUp = ()=>{
 // })
 
 //signUP button function call
-  signUp()   
+  signUp() 
+
+
+ 
+ 
 
     </script>
 

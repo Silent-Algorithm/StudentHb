@@ -1,6 +1,7 @@
   //Student data storage
             let students=JSON.parse(localStorage.getItem('students')) || [];
-            let currentFilter = 'all';
+let currentFilter = 'all';
+
 
             // Dom Elements
                     const studentForm = document.getElementById('studentForm');
@@ -26,9 +27,10 @@
 
 
          // Form submission
-            studentForm.addEventListener('submit', function(e) {
+            studentForm.addEventListener('submit',(e) =>{
                 e.preventDefault();
                 addStudent();
+                window.location.href = 'home.html'
             });
 
         // Search functionality
@@ -51,6 +53,7 @@
         // Modal functionality
             closeModal.addEventListener('click', function() {
                 studentModal.style.display = 'none';
+                document.querySelector('body').style.overflow='scroll'
             });
 
             window.addEventListener('click', function(e) {
@@ -120,7 +123,7 @@ const studData =
             
 
             // Show success message
-            alert('Student registered successfully!');
+            alert(`Student registered successfully!`);
         }
 
         // Render students list
@@ -173,6 +176,7 @@ const studData =
                     </div>
                     <div class="student-actions">
                         <button class="btn btn-success view-btn" data-id="${student.id}">View</button>
+                        
                         <button class="btn btn-danger delete-btn" data-id="${student.id}">Delete</button>
                     </div>
                 `;
@@ -185,6 +189,7 @@ const studData =
                 btn.addEventListener('click', function() {
                     const studentId = this.getAttribute('data-id');
                     showStudentDetails(studentId);
+                    document.querySelector('body').style.overflow='hidden'
                 });
             });
 
@@ -229,6 +234,7 @@ const studData =
                 
                 galleryItem.addEventListener('click', function() {
                     showStudentDetails(student.id);
+                    document.querySelector('body').style.overflow='hidden'
                 });
                 
                 studentGallery.appendChild(galleryItem);
@@ -293,7 +299,7 @@ const studData =
         function logout() {
             if (confirm('Are you sure you want to log out?')) {
                 // Redirect to login page
-                window.location.href = 'index.html';
+                window.location.href = 'adminLogin.html';
             }
         }
 
