@@ -58,7 +58,7 @@ console.log(use)
         
 //logout from admin Dashboard
 
-document.getElementById(logo)
+
 
         
 // const adminName = document.createElement('p')

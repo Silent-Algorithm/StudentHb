@@ -354,6 +354,7 @@
             z-index: 1000;
             align-items: center;
             justify-content: center;
+            
         }
         
         .modal-content {
@@ -361,8 +362,13 @@
             padding: 30px;
             border-radius: 10px;
             max-width: 500px;
-            width: 90%;
+            width: 50%;
+            height: 80%;
             box-shadow: var(--shadow);
+            overflow: scroll;
+            scrollbar-color: rgb(56, 56, 255);
+            scrollbar-width: 30px;
+            scroll-behavior: smooth;
         }
         
         .modal-header {

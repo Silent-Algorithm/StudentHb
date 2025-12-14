@@ -37,10 +37,17 @@
      
 console.log("hel");
 const administrators = JSON.parse(localStorage.getItem('administrators'));
-console.log(administrators);
-const users = Object.create(administrators);
-console.log(users)
 
+const users = Object.create(administrators);
+
+const {fullName,matricule}=users;
+console.log(users.length)
+const isObjectEmpty = users.length;
+if(users.length === undefined){
+    console.log('object is empty')
+}else{
+    console.log('Object is not empty');
+}
 
 
 
@@ -50,10 +57,17 @@ console.log(users)
 
 
         // Login functionality
-        document.getElementById('loginForm').addEventListener('submit', function(e) {
-            e.preventDefault();
             
-            const username = document.getElementById('username').value;
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+           
+         e.preventDefault();
+            
+                 if(users.length === undefined) {
+                alert('wrong cridentials');
+                console.log('There is no registerd administrator yet, try singning up as admin')
+                
+            }else{
+        const username = document.getElementById('username').value;
          
  let name = username;
 localStorage.setItem('adminName', name)
@@ -67,11 +81,11 @@ localStorage.setItem('adminName', name)
                 window.location.href = 'adminDashboard.html'
                 console.log('you are a administrators')
                 
-            } else if(Array(users).length === 0) {
-                alert('wrong cridentials');
-            }else{
+            } else{
                 alert('wrong cridentials');
             }
+            }
+
             
         });
 

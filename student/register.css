@@ -187,9 +187,16 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 1rem;
+            font-size: 12px;
             font-weight: 600;
             transition: all 0.3s;
+            width: fit-content;
+            height: fit-content;
+        }
+        @media (max-width: 372px) {
+            .btn{
+                padding: 12px 6px;
+            }
         }
         
         .btn-primary {
