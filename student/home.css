@@ -362,10 +362,10 @@
             padding: 30px;
             border-radius: 10px;
             max-width: 500px;
-            width: 50%;
+            width: 80%;
             height: 80%;
             box-shadow: var(--shadow);
-            overflow: scroll;
+            overflow-y: scroll;
             scrollbar-color: rgb(56, 56, 255);
             scrollbar-width: 30px;
             scroll-behavior: smooth;

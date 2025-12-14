@@ -52,8 +52,13 @@ console.log(users)
         // Login functionality
         document.getElementById('loginForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            
-            const username = document.getElementById('username').value;
+
+             if(users.length === undefined) {
+                alert('wrong cridentials');
+                console.log('There is no registerd Student yet, try singning up as a Student')
+                
+            }else{
+             const username = document.getElementById('username').value;
             const password = document.getElementById('password').value;
             const error = document.getElementById('error');
 
@@ -69,7 +74,8 @@ console.log(users)
             }else{
                 alert('wrong cridentials');
             }
-            
+            }
+                   
         });
 
         //SignUp Student
