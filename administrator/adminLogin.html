@@ -6,6 +6,8 @@
     <title>Login - administrators Hub</title>
     <link rel="stylesheet" href="\administrator\adminLogin.css">
 
+    <script defer src="adminDashboard.js"></script>
+
 </head>
 <body>
             
@@ -68,9 +70,10 @@ if(users.length === undefined){
                 
             }else{
         const username = document.getElementById('username').value;
-         
- let name = username;
-localStorage.setItem('adminName', name)
+
+localStorage.setItem('adminName', username)
+//  let name = username;
+// localStorage.setItem('adminName', name)
             const password = document.getElementById('password').value;
             const error = document.getElementById('error');
 

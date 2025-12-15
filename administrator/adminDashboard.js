@@ -322,3 +322,11 @@ const studData =
 }
         
 
+const adminName = document.createElement('p')
+
+const admin = document.querySelector(".adminName")
+const name = localStorage.getItem('adminName')
+adminName.innerHTML = `
+<div style ="position:relative; bottom:30px;"><h1 style="color:black;font-size:24px;">Amdministrator: <br/><span style="color:#3f37c9;">${name}</span></h1></div>`
+
+admin.append(adminName)

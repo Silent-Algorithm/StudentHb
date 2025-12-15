@@ -59,6 +59,7 @@ console.log(users)
                 
             }else{
              const username = document.getElementById('username').value;
+             localStorage.setItem("studName", username)
             const password = document.getElementById('password').value;
             const error = document.getElementById('error');
 
@@ -98,6 +99,7 @@ const signUp = ()=>{
   signUp()   
 
     </script>
+    
 
 </body>
 </html>

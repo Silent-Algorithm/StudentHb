@@ -13,6 +13,7 @@ let currentFilter = 'all';
                     const studentModal = document.getElementById('studentModal');
                     const closeModal = document.getElementById('closeModal');
                     const modalBody = document.getElementById('modalBody');
+                   
             
             //Stats elements
                 const totalStudentsEl = document.getElementById('total-students');
@@ -30,6 +31,8 @@ let currentFilter = 'all';
             studentForm.addEventListener('submit',(e) =>{
                 e.preventDefault();
                 addStudent();
+                 const studName = document.getElementById('fullName').value
+                localStorage.setItem('studName', studName)
                 window.location.href = 'home.html'
             });
 
@@ -121,7 +124,7 @@ const studData =
             renderStudentGallery();
             updateStats();
             
-
+           
             // Show success message
             alert(`Student registered successfully!`);
         }
@@ -319,5 +322,29 @@ const studData =
             femaleStudentsEl.textContent = femaleCount;
             
 }
-        
 
+const adminName = document.createElement('p')
+
+const admin = document.querySelector(".userName")
+const name = localStorage.getItem('studName')
+adminName.innerHTML = `
+<div style ="position:relative; bottom:30px;"><h1 style="color:black;font-size:24px;">Welcome!! <br/><span style="color:#3f37c9;">${name}</span></h1></div>`
+
+admin.append(adminName)
+
+        
+let stud
+let male = 0
+let female = 0
+let coltech = 0
+let naphi = 0
+let fhs = 0;
+for (stud in students) {
+    students[stud].gender === 'Male' ? male++ : female++;
+    students[stud].school === 'COLTECH' ? coltech++ : students[stud] === 'NAPHI' ? naphi++ : fhs++;
+}
+console.log(`The number of students are: ${students.length}`)
+console.log(`The number of Males are: ${male}`)
+console.log(`The number of females are: ${female}`)
+console.log(`There are/is ${coltech} students from COLTECH, ${naphi} students from NAPHI, and ${fhs} students from FHS`)
+console.log(students[0])

@@ -4,11 +4,11 @@ aside{
     width: 100%;
     top: 0;
     left: 0;
-    height: 34%;
+    height: 45%;
     display: none;
     flex-direction: column;
     align-items: center;
-
+    z-index: 1000;
 }
 
 aside .close-icon{
@@ -20,9 +20,9 @@ aside a{
     text-decoration: none;
     position: relative;
     top: 25%;
-    padding: 20px 0;
+    padding: 10px 0;
     color: white;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 600;
 }
 
@@ -32,7 +32,7 @@ aside a{
     position: fixed;
     width: 100%;
     left: 0;
-    top: 34%;
+    top: 45%;
     right: 0;
     display: none;
 }
@@ -154,6 +154,12 @@ aside a{
             transition: all 0.3s;
         }
      
+        }
+        @media (max-width: 372px) {
+            h1{
+                font-size: 16px;
+            }
+            
         }
         
     

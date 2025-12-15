@@ -7,7 +7,10 @@ const adminForm = document.getElementById('adminForm');
          // Form submission
             adminForm.addEventListener('submit',(e) =>{
                 e.preventDefault();
-                addAdmin();
+              addAdmin();
+              const adminName = document.querySelector('#fullName').value
+              localStorage.setItem('adminName', adminName)
+              console.log(localStorage.getItem('adminName'))
                 window.location.href = 'adminDashboard.html'
                  alert(`Administrator registered successfully!`);
 
@@ -63,7 +66,7 @@ console.log(use)
         
 // const adminName = document.createElement('p')
 
-// const admin = document.querySelector(".admin")
+// const admin = document.querySelector(".adminName")
 // admin.append(adminName)
 // adminName.innerHTML = `<div style ="padding-bottom:20px;">
 // <div><h1>Amdministrators Name: ${localStorage.getItem('adminName')}</h1></div></div>`
