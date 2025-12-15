@@ -476,6 +476,17 @@
         }
     
         }
-
-
         
+        @media (max-width: 580px) {
+            .nav a{
+                display: none;
+            }
+            .nav{
+                padding: 26px 0;
+                gap: 25px;
+            }
+            .menu-icon{
+                display: block;
+            }
+
+        }

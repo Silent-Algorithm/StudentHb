@@ -27,7 +27,7 @@
             margin: 0 auto;
         }
         
-        header {
+        /* header {
            
             padding: 20px 30px;
             border-radius: 15px;
@@ -70,7 +70,7 @@
         .nav a.active {
             background: var(--primary);
             color: white;
-        }
+        } */
         
         .about-hero {
             background: white;
@@ -212,7 +212,7 @@
         }
         
         @media (max-width: 768px) {
-            header {
+            /* header {
                 flex-direction: column;
                 gap: 15px;
                 text-align: center;
@@ -222,7 +222,7 @@
                 flex-wrap: wrap;
                 justify-content: center;
             }
-            
+             */
             .about-hero {
                 padding: 30px 20px;
             }
@@ -230,9 +230,9 @@
             .about-hero h2 {
                 font-size: 2rem;
             }
-            h1{
+            /* h1{
                 font-size: 18px;
-            }
+            } */
             .team-member{
                 font-size: 14px;
                 
@@ -273,7 +273,7 @@
             }
         }
 
-          .logout {
+          /* .logout {
             background: #e63946;
             color: white;
             border: none;
@@ -287,4 +287,4 @@
         .logout:hover {
             background: #c1121f;
             transform: translateY(-2px);
-        }
+        } */

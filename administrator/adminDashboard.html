@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Hub</title>
     <link rel="stylesheet" href="\student\home.css">
+    <link rel="stylesheet" href="\student\sidebar.css">
+
+    <script defer src="\student\sidebar.js"></script>
     <script type="module" src="saveStud.js"></script>
 </head>
 <body>
@@ -17,8 +20,20 @@
                 <a href="registeredStudents.html">Registered Students</a>
   
                 <button class="logout" id="logoutBtn">Log Out</button>
+                <div>
+                    <img class="menu-icon" src="Icon (4).png" alt="">
+                </div>
             </div>
         </header>
+
+        <aside>
+             <img class="close-icon" src="\student\close_35dp_8176AF_FILL0_wght400_GRAD0_opsz40.svg"  alt="">
+
+             <a href="adminDashboard.html">Home</a>
+                <a href="registeredStudents.html">Registered Students</a>
+        </aside>
+
+        <div class="shade"></div>
 
         <div class="stats">
             <div class="stat-card">
