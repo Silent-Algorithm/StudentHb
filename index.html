@@ -67,7 +67,7 @@ console.log(users)
 
             if (verifyUser) {
                 alert(`Welcome back ${username}`)
-                window.location.href = 'home.html'
+                window.location.href = '/student/home.html'
                 console.log('you are a student')
                 
             } else if(Array(users).length === 0) {
@@ -87,7 +87,7 @@ const signUp = ()=>{
             event.preventDefault()
             document.getElementById('loginPage').style.display = 'none'
             // document.getElementById('regForm').style.display = 'block'
-            window.location.href = 'register.html'
+            window.location.href = '/student/register.html'
       })        
 }
 
